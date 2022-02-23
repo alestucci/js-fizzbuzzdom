@@ -1,6 +1,7 @@
 let output = document.querySelector(".container");
 
-for (let i = 1; i <= 100; i++) {
+// 1st solution
+/*for (let i = 1; i <= 100; i++) {
   switch (i % 15) {
     case 0:
       output.innerHTML += `<div class="square sky-blue">fizzbuzz</div>`;
@@ -17,6 +18,39 @@ for (let i = 1; i <= 100; i++) {
       break;
     default:
       output.innerHTML += `<div class="square sea">${i}</div>`;
+      break;
+  }
+}*/
+
+// 2nd solution
+for (let i = 1; i <= 100; i++) {
+  let box = document.createElement("div");
+  box.classList.add("square");
+
+  switch (i % 15) {
+    case 0:
+      box.classList.add("sky-blue");
+      box.innerHTML = "fizzbuzz";
+      output.append(box);
+      break;
+    case 3:
+    case 6:
+    case 9:
+    case 12:
+        box.classList.add("grey-green");
+        box.innerHTML = "fizz";
+        output.append(box);
+      break;
+    case 5:
+    case 10:
+        box.classList.add("green");
+        box.innerHTML = "buzz";
+        output.append(box);
+      break;
+    default:
+        box.classList.add("sea");
+        box.innerHTML = i;
+        output.append(box);
       break;
   }
 }
