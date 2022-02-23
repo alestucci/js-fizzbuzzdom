@@ -10,5 +10,41 @@ html {
 
 body {
     text-align: center;
+    background-color: #263D4D;
 }
 
+h1 {
+    color: white;
+}
+
+.container {
+    max-width: 960px;
+    margin: 2rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.square {
+    height: 6em;
+    width: 6em;
+    margin: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sky-blue {
+    background-color: #02AABD;
+}
+
+.grey-green {
+    background-color: #11998E;
+}
+
+.green {
+    background-color: #38EF7D;
+}
+
+.sea {
+    background-color: #00CDAC;
+}
