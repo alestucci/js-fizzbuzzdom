@@ -63,18 +63,15 @@ for (let i = 1; i <= 100; i++) {
   if (i % 15 == 0) {
     box.classList.add("sky-blue");
     box.innerHTML = "fizzbuzz";
-    output.append(box);
   } else if (i % 3 == 0) {
     box.classList.add("grey-green");
     box.innerHTML = "fizz";
-    output.append(box);
   } else if (i % 5 == 0) {
     box.classList.add("green");
     box.innerHTML = "buzz";
-    output.append(box);
   } else {
     box.classList.add("sea");
     box.innerHTML = i;
-    output.append(box);
   }
+  output.append(box);
 }
